@@ -69,7 +69,7 @@
 		E5458B6B14D8B2E3003BE4FF /* PAWWallPostCreateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PAWWallPostCreateViewController.xib; sourceTree = "<group>"; };
 		E554D5C114E32EFB008D027A /* PAWPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = PAWPost.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		E554D5C214E32EFB008D027A /* PAWPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = PAWPost.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		E56E83F214D72E1100E856AB /* Anywall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Anywall.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E56E83F214D72E1100E856AB /* TLAnywall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TLAnywall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E56E83F614D72E1100E856AB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E56E83F814D72E1100E856AB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E56E83FA14D72E1100E856AB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -196,7 +196,7 @@
 		E56E83F314D72E1100E856AB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E56E83F214D72E1100E856AB /* Anywall.app */,
+				E56E83F214D72E1100E856AB /* TLAnywall.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -310,23 +310,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E56E83F114D72E1100E856AB /* Anywall */ = {
+		E56E83F114D72E1100E856AB /* TLAnywall */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E56E841014D72E1100E856AB /* Build configuration list for PBXNativeTarget "Anywall" */;
+			buildConfigurationList = E56E841014D72E1100E856AB /* Build configuration list for PBXNativeTarget "TLAnywall" */;
 			buildPhases = (
 				3252C134A06F05E2AE4B8C0B /* Check Pods Manifest.lock */,
 				E56E83EE14D72E1100E856AB /* Sources */,
 				E56E83EF14D72E1100E856AB /* Frameworks */,
 				E56E83F014D72E1100E856AB /* Resources */,
 				7F29349023072BACE6F6F13A /* Copy Pods Resources */,
+				906D7642369EDCF07531B8EB /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Anywall;
+			name = TLAnywall;
 			productName = AnyWall;
-			productReference = E56E83F214D72E1100E856AB /* Anywall.app */;
+			productReference = E56E83F214D72E1100E856AB /* TLAnywall.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -339,7 +340,7 @@
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Parse Inc.";
 			};
-			buildConfigurationList = E56E83EC14D72E1100E856AB /* Build configuration list for PBXProject "Anywall" */;
+			buildConfigurationList = E56E83EC14D72E1100E856AB /* Build configuration list for PBXProject "TLAnywall" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -351,7 +352,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E56E83F114D72E1100E856AB /* Anywall */,
+				E56E83F114D72E1100E856AB /* TLAnywall */,
 			);
 		};
 /* End PBXProject section */
@@ -403,6 +404,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		906D7642369EDCF07531B8EB /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -540,8 +556,8 @@
 				GCC_WARN_UNUSED_FUNCTION = NO;
 				GCC_WARN_UNUSED_LABEL = NO;
 				INFOPLIST_FILE = "AnyWall/AnyWall-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.parse.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.teklabsco.TLAnywall;
+				PRODUCT_NAME = TLAnywall;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -571,8 +587,8 @@
 				GCC_WARN_UNUSED_FUNCTION = NO;
 				GCC_WARN_UNUSED_LABEL = NO;
 				INFOPLIST_FILE = "AnyWall/AnyWall-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.parse.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.teklabsco.TLAnywall;
+				PRODUCT_NAME = TLAnywall;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -635,8 +651,8 @@
 				GCC_WARN_UNUSED_FUNCTION = NO;
 				GCC_WARN_UNUSED_LABEL = NO;
 				INFOPLIST_FILE = "AnyWall/AnyWall-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.parse.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.teklabsco.TLAnywall;
+				PRODUCT_NAME = TLAnywall;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Distribution;
@@ -700,8 +716,8 @@
 				GCC_WARN_UNUSED_FUNCTION = NO;
 				GCC_WARN_UNUSED_LABEL = NO;
 				INFOPLIST_FILE = "AnyWall/AnyWall-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.parse.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.teklabsco.TLAnywall;
+				PRODUCT_NAME = TLAnywall;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -710,7 +726,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E56E83EC14D72E1100E856AB /* Build configuration list for PBXProject "Anywall" */ = {
+		E56E83EC14D72E1100E856AB /* Build configuration list for PBXProject "TLAnywall" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E56E840E14D72E1100E856AB /* Debug */,
@@ -721,7 +737,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E56E841014D72E1100E856AB /* Build configuration list for PBXNativeTarget "Anywall" */ = {
+		E56E841014D72E1100E856AB /* Build configuration list for PBXNativeTarget "TLAnywall" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E56E841114D72E1100E856AB /* Debug */,
